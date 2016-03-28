@@ -1,0 +1,30 @@
+<h4>Users list ( <%= link_to 'click here to create new user', new_user_path %> )</h4>
+<p>
+  Download:
+  <%= link_to "CSV", users_path(format: "csv") %> |
+  <%= link_to "Excel", users_path(format: "xls") %> |
+  <%= link_to "PDF", users_path(format: "pdf") %> |
+  <%= link_to 'print', users_path, :onclick => 'window.print();return false;'%>
+</p>
+<table>
+  <thead>
+  <tr>
+    <td>Name</td>
+    <td>Salary</td>
+    <td>Contact</td>
+  </tr>
+  </thead>
+  <tbody>
+
+  <% if @users.any? %>
+      <% @users.each do |user| %>
+          <tr>
+            <td> <%= user.name %> </td>
+            <td> <%= user.salary %> </td>
+            <td> <%= user.contact %> </td>
+          </tr>
+      <% end %>
+  <% end %>
+
+  </tbody>
+</table>

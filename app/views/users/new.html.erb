@@ -1,0 +1,30 @@
+<h4> New user form </h4>
+<%= form_for @user do |f| %>
+    <% if @user.errors.any? %>
+        <div id="error_explanation">
+          <h2>
+            <%= pluralize(@user.errors.count, "error") %>
+          </h2>
+          <ul>
+            <% @user.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <p>
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </p>
+    <p>
+      <%= f.label :salary %><br>
+      <%= f.number_field :salary %>
+    </p>
+    <p>
+      <%= f.label :contact %><br>
+      <%= f.text_field :contact %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>
