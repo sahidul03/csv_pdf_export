@@ -25,6 +25,18 @@ class UsersController < ApplicationController
     end
   end
 
+  def dashboard
+
+  end
+
+  def login
+
+  end
+
+  def logout
+
+  end
+
   protected
   def params_user
     params.require(:user).permit(:name, :salary, :contact)

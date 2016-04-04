@@ -10,6 +10,24 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+
+ *= require pace-theme-flash
+ *= require uniform.default.min
+ *= require bootstrap.min
+ *= require font-awesome
+ *= require simple-line-icons
+ *= require menu_cornerbox
+ *= require waves.min
+ *= require switchery.min
+ *= require style
+ *= require weather-icons.min
+ *= require MetroJs.min
+ *= require toastr.min
+ *= require modern.min
+ *= require white
+ *= require custom
+
+
  *= require_tree .
  *= require_self
  */
