@@ -20,7 +20,9 @@
             <Cell><Data ss:Type="String"><%= user.contact %></Data></Cell>
           </Row>
       <% end %>
+      <Row></Row>
       <Row>
+        <Cell></Cell>
         <Cell><Data ss:Type="String">Total salary</Data></Cell>
         <Cell><Data ss:Type="Number"><%= @users.sum(:salary) %></Data></Cell>
       </Row>
